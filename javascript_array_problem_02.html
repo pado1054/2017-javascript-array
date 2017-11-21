@@ -3,8 +3,22 @@
 <head>
     <script type="text/javascript">
         function check_string() {
-          // TODO : 여기에 여러분이 직접 코딩을 해주세요.          
-          return true;
+          var boo = 0;
+          var start=0
+          var end= 0;
+          for(var i=0;arguments[0].lenght; i++){
+              console.log(arguments[i].charAt(i));
+              if(arguments[0].charAt(i) == '(')
+                  start = start + 1 
+              else 
+                  end = end + 1 
+          }
+                
+          if(start == end){
+              return true;
+          }else{
+              return false;
+          }
         }
 
         expect(check_string('(())())'), false);
